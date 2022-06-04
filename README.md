@@ -40,8 +40,7 @@ The script will create a new file with all the urls re-writed into the first col
   <pre>pip install xlrd</pre>
   
   <p>You need to install even the xlwt library that will allow you to create and write into new .xlsx files and requests library too:</p>
-  <pre>pip install xlwt
-  pip install requests</pre>
+  <pre>pip install xlwt<br>pip install requests</pre>
   
   <p>Once done, navigate into your folder with cmd/terminal and launch (N.B. use your python version into the next command):</p>
   <pre>python url-status-checker.py</pre>
