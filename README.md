@@ -15,9 +15,6 @@
     This is a simple script in Python that will check a series of urls from the first column of an .xlsx file, get the history from the response (redirects etc...) and will tell you, in a new .xlsx file, if the redirect is present (or not), if the page goes in 404 and if the redirected url is correct (based on the second column of the excel file that contains the list of the "final" urls).
 </p>
 
-<p text-align="center">
-The script will create a new file with all the urls re-writed into the first column and into the second column of the file. Then in the third column you will have the history (if there is an history!) with a message like: <i>"Redirect status: 301"</i> (but it can be even a 302) got from the respone and into the fourth column you'll have a something like <i>"The redirect is correct - Status code: 200"</i> of some kind of errors.</p>
-
 <h3>SETTING UP VARIABLES</h3>
   
   <p>Open the script with an editor like Notepad++ and edit the following variables as you prefer:
@@ -27,7 +24,7 @@ The script will create a new file with all the urls re-writed into the first col
     <li><b>doOnlyOneSheet = False</b>  # if for any reason you need to do one file sheet at a time put this to True (with capital T letter)</li>
   </ul>
   
-  <p><b>N.B.</b> REMEMBER TO CHANGE ADD CORRECT PATHS TO THE FILES THAT YOU'LL READ AND WRITE!</p>
+  <p><b>N.B.</b> REMEMBER TO CHANGE OR ADD CORRECT PATHS TO THE FILES THAT YOU'LL READ AND WRITE!</p>
   
   <h3>INSTALLATION GUIDE</h3>
   
