@@ -11,11 +11,9 @@ pathExcelToWrite = 'W:\\Example\\Local\\Folder\\result.xlsx'  # path of the file
 excel_file_path = xlrd.open_workbook(pathFileToRead)
 excel_sheet = excel_file_path.sheet_by_index(sheetNumber)
 
-#pathFileToWrite = open("W:\\Example\\Local\\Folder\\rewrited-rules.txt", "w")  # path of the file to write to
-
 headers = headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko)'}
 
-#excel to write
+# excel to write
 exel_file_to_write = xlwt.Workbook()
 
 index = 0
@@ -34,8 +32,11 @@ for worksheets in excel_file_path.sheet_names():
         sheetToWrite.write(row, 0, urlFrom)
 
         # here I get the history of the old file with every redirect (if there are any)
-        fromUrlResponse = requests.get(urlFrom, headers=headers)
-        status = fromUrlResponse.status_code #if needed, 200 or 404 or something else
+        # verify=False so you don't have to worry about the SSL: CERTIFICATE_VERITY_FAILED error
+        fromUrlResponse = requests.get(urlFrom, headers=headers, verify=False)
+        # I'm disabling the warnings
+        requests.packages.urllib3.disable_warnings()
+        status = fromUrlResponse.status_code  # if needed, 200 or 404 or something else
         fromUrl_history = fromUrlResponse.history
         fromNew_url = fromUrlResponse.url
 
