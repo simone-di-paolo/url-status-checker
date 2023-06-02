@@ -44,3 +44,10 @@
   
   <p>Now, you will find your new .xslx file into your folder destination (specified inside the script).</p>
 </div>
+
+## UPDATES
+
+<h3>02-06-2023</h3>
+
+Features:
+- Added a first version of a GUI
