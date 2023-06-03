@@ -19,35 +19,39 @@
   
   <p>Open the script with an editor like Notepad++ and edit the following variables as you prefer:
   <ul>
-    <li><b>startFromWhichRow = 1</b>  # in case the first row of your Excel file has no rules but only column titles put 1, otherwise 0</li>
-    <li><b>sheetNumber = 0</b>  # the index of the excel sheet you want to process, if doOnlyOneSheet is False it will do them all starting from this index</li>
-    <li><b>doOnlyOneSheet = False</b>  # if for any reason you need to do one file sheet at a time put this to True (with capital T letter)</li>
+    <li><b>Start from row</b>  # specify the first row of your .xlsx/.xls file that starts with a URL</li>
+    <li><b>Sheet number</b>  # the index of the excel sheet you want to process, if "Selected sheet only" is unchecked it will do them all starting from this index</li>
+    <li><b>Selected sheet only</b>  # if for any reason you need to do one file sheet at a time, flag this checkbox </li>
   </ul>
-  
-  <p><b>N.B.</b> REMEMBER TO CHANGE OR ADD CORRECT PATHS TO THE FILES THAT YOU'LL READ AND WRITE!</p>
   
   <h3>INSTALLATION GUIDE</h3>
   
-  <p>To make this script work you need to install Python and xlrd library.</p>
+  <p>To make this script work you need to install Python, xlrd and xlwt libraries.</p>
   <p>You can download the latest version of Python from those links for <a href="https://www.python.org/downloads/" target="_blank">Windows</a>, <a href="https://www.python.org/downloads/source/" target="_blank">Linux/UNIX</a>, <a href="https://www.python.org/downloads/macos/" target="_blank">MacOS</a>.</p>
   
-  <p>If you are using .xlsx files, you'll need to install this specific version:</p>
-  <pre>pip install xlrd==1.2.0</pre>
-  <p>Otherwise, if you are using .xls files, then, you'll need to install the latest version:</p>
-  <pre>pip install xlrd</pre>
+  <p>Move into project folder with git bash or cmd and launch this command to easy install all the required libraries:</p>
+  <pre>pip install -r requirements.txt --user</pre>
   
-  <p>You need to install even the xlwt library that will allow you to create and write into new .xlsx files and requests library too:</p>
-  <pre>pip install xlwt<br>pip install requests</pre>
+  <p>Just in case you are using .xls (and not .xlsx) files, then, you'll need to install the latest version manually:</p>
+  <pre>pip install --upgrade xlrd</pre>
+
+  <p>Once done, make sure you're in the correct folder with cmd/terminal and launch (N.B. use your python version into the next command):</p>
+  <pre>python gui.py</pre>
   
-  <p>Once done, navigate into your folder with cmd/terminal and launch (N.B. use your python version into the next command):</p>
-  <pre>python url-status-checker.py</pre>
+  <p>Now, setup all needed inside the brand new GUI and start the script.</p>
+  <p>After that, you will find your new results.xslx file into your folder destination (specified inside the GUI).</p>
   
-  <p>Now, you will find your new .xslx file into your folder destination (specified inside the script).</p>
+  <p>NB: an .exe of the script is available but your OS will probably block it. The best way to run the script is buy command line as described above but if you want, you can try to whitelist the .exe and run it in the easiest way possible.</p>
 </div>
 
 ## UPDATES
+<h3>03-06-2023 - <a href="https://github.com/simone-di-paolo/url-status-checker/releases/tag/0.1.2">Version 0.1.2</a></h3>
 
-<h3>02-06-2023</h3>
+Features:
+- Added the requirements.txt file in order to easily install all the required packages
+- Added the .exe of the script to the release
+
+<h3>02-06-2023 - <a href="https://github.com/simone-di-paolo/url-status-checker/releases/tag/v0.1">Version 0.1</a></h3>
 
 Features:
 - Added a first version of a GUI
