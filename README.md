@@ -45,7 +45,7 @@
 </div>
 
 ## UPDATES
-<h3>03-06-2023 - <a href="https://github.com/simone-di-paolo/url-status-checker/releases/tag/0.1.2">Version 0.1.2</a></h3>
+<h3>03-06-2023 - <a href="https://github.com/simone-di-paolo/url-status-checker/releases/tag/0.1.3">Version 0.1.3</a></h3>
 
 Features:
 - Added the requirements.txt file in order to easily install all the required packages
