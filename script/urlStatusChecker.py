@@ -26,7 +26,7 @@ def execute(start_from_row, sheet_number, do_only_one_sheet, file_to_read, excel
         # Aggiungi l'output di log al widget di testo
         log_text.delete("1.0", tk.END)
         log_text.configure(fg="white")
-        log_text.insert(tk.END, "### Inizio script ###\n")
+        log_text.insert(tk.END, "### START ###\n")
 
         for worksheets in excel_file_path.sheet_names():
             excel_sheet = excel_file_path.sheet_by_index(sheet_number)
@@ -79,7 +79,7 @@ def execute(start_from_row, sheet_number, do_only_one_sheet, file_to_read, excel
                 # Aggiorna il log con lo stato di completamento
                 completion_percentage = int((row - start_from_row + 1) / (excel_sheet.nrows - start_from_row) * 100)
                 if completion_percentage % 10 == 0:
-                    log_text.insert(tk.END, f"\nPercentuale di completamento: {completion_percentage}%")
+                    log_text.insert(tk.END, f"\nProgress: {completion_percentage}%")
 
             # if you want to do only one sheet at a time interrupts the "for" here
             if do_only_one_sheet:
@@ -90,7 +90,7 @@ def execute(start_from_row, sheet_number, do_only_one_sheet, file_to_read, excel
         exel_file_to_write.save(excel_path_to_write)
 
         # Aggiorna il log con l'indicazione di completamento
-        log_text.insert(tk.END, "\n### Completato ###\n")
+        log_text.insert(tk.END, "\n### COMPLETED ###\n")
     except FileNotFoundError:
         add_error_message(log_text, "File not found. \nPlease select a valid file.")
     except requests.exceptions.MissingSchema:

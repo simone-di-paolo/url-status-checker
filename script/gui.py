@@ -98,7 +98,7 @@ def execute_script():
 
 # Creazione della finestra dell'interfaccia grafica
 window = tk.Tk()
-window.title("Script di Controllo Redirect")
+window.title("URL Status Checker")
 window.geometry("600x800")
 
 # Configurazione dei colori e stili
@@ -152,7 +152,7 @@ sheet_number_entry.config(validate="key", validatecommand=(validate_numeric_inpu
 
 # Checkbox per do_only_one_sheet
 do_only_one_sheet_var = tk.BooleanVar()
-do_only_one_sheet_check = tk.Checkbutton(window, text="Do Only One Sheet", variable=do_only_one_sheet_var)
+do_only_one_sheet_check = tk.Checkbutton(window, text="Selected sheet only", variable=do_only_one_sheet_var)
 apply_style(do_only_one_sheet_check)
 do_only_one_sheet_check.config(bg="#424242", selectcolor="#424242")
 do_only_one_sheet_check.pack()
@@ -166,7 +166,7 @@ def browse_file_to_read():
 
 
 # Etichetta e campo di input per il file da leggere
-file_to_read_label = tk.Label(window, text="Seleziona file sorgente:")
+file_to_read_label = tk.Label(window, text="Select source file:")
 apply_style(file_to_read_label)
 file_to_read_label.pack(pady=(16, 16), padx=8)
 
@@ -187,7 +187,7 @@ def browse_excel_path_to_write():
 
 
 # Etichetta e campo di input per il percorso di scrittura del file Excel
-excel_path_to_write_label = tk.Label(window, text="Seleziona dove salvare il file:")
+excel_path_to_write_label = tk.Label(window, text="Select destination folder:")
 apply_style(excel_path_to_write_label)
 excel_path_to_write_label.pack(pady=(16, 16), padx=8)
 
@@ -218,7 +218,7 @@ scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 log_text.config(yscrollcommand=scrollbar.set)
 
 # Pulsante "Esegui"
-execute_button = tk.Button(window, text="Esegui", command=execute_script, bg=button_color, fg=button_text_color)
+execute_button = tk.Button(window, text="START", command=execute_script, bg=button_color, fg=button_text_color)
 execute_button.pack(pady=16)
 
 # Carica le configurazioni salvate
