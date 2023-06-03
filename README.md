@@ -52,6 +52,4 @@
 Features:
 - Added a first version of a GUI
 
-![Screenshot 2023-06-02 183327](https://github.com/simone-di-paolo/url-status-checker/assets/24905857/0eef30d8-4bdc-4705-a9d4-cc24c8c6c730)
-
-
+<img style="width: 300px" src="https://github.com/simone-di-paolo/url-status-checker/assets/24905857/8a52ed6e-8f2a-4c61-aa5f-9faba92ae019"/>
